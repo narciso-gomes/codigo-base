@@ -1,0 +1,23 @@
+* {
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 a {
+    color: seagreen;
+}
+
+p {
+    font-size: 20px;
+}
+
+.filme-hoje {
+    color: darkred;
+}
+
+.filme-amanha {
+    color: darkblue;
+}
