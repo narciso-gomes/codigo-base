@@ -9,13 +9,21 @@ addBtn.addEventListener('click', () => {
     if (taskText === "") return;
 
     const listItem = document.createElement("li");
+    listItem.className = 'todo-item';
     listItem.innerHTML = `
         ${taskText}
-        <button>X</button>
+        <button class="delete-btn">X</button>
     `;
+
+    listItem.querySelector('.delete-btn').addEventListener('click', () => {
+        listItem.remove();
+    })
 
     todoList.appendChild(listItem);
     todoInput.value = "";
 })
 
+todoInput.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter') addBtn.click()
+})
 
